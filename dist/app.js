@@ -18,6 +18,13 @@ Break it down to very small bits
 Organise structure beforehand
 */
 
+/* Current task 
+==========
+when clicking add task, the inputted new task must appear in the task list:
+-add event listner on button
+-dynamically create a list item containing the new task
+========== */
+
 /* EVENT LISTENERS */
 
 
