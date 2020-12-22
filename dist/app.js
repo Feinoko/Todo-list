@@ -20,7 +20,8 @@ Organise structure beforehand
 
 /* Current task 
 ==========
-make the newly created list item fade in
+make the newly created list item fade in - completed 22.12.20 11:40
+
 ========== */
 
 /* VARIABLES */
@@ -30,12 +31,11 @@ const taskList = document.querySelector('.task-list');
 
 /* EVENT HANDLERS */
 
-// when adding a task
+// adding task to the list
 form.addEventListener('submit', function(e) {
 
   // get the input value
   const task = taskInput.value;
-  // console.log(task);
 
   // clear the input
   taskInput.value = '';
@@ -44,27 +44,22 @@ form.addEventListener('submit', function(e) {
   const listItem = document.createElement('li');
   listItem.className = 'list-item transition-all duration-500 opacity-0';
   listItem.textContent = task;
-  // listItem.setAttribute('onload', 'fadeIn()');
   log(listItem);
   taskList.appendChild(listItem); // will append as last child (by default)
-  setTimeout(fadeIn, 5);
-  function fadeIn() {
-    const item = document.querySelector('.list-item:last-child');
-    listItem.className += ' fade-in';
-  }
+  setTimeout(fadeIn, 1); // for some reason, need a small delay until adding the fadein class for it to work
  
-  
-  
+  // preventing default form behavior when submitting
   e.preventDefault();
 });
 
 /* UI props / cosmetics */
 
 // adds the class that fades in created element
-function fadeIn() {
-  const listItem = document.querySelector('.list-item:last-child'); // have to redeclare it due to function scope
-  listItem.className += ' fade-in'; // the space is so that it adds the class instead of removing the current
-}
+  function fadeIn() {
+    const item = document.querySelector('.list-item:last-child');
+    item.className += ' fade-in';
+  }
+
 
 /* Utility */
 
