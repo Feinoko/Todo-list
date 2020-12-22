@@ -20,12 +20,55 @@ Organise structure beforehand
 
 /* Current task 
 ==========
-when clicking add task, the inputted new task must appear in the task list:
--add event listner on button
--dynamically create a list item containing the new task
+make the newly created list item fade in
 ========== */
 
-/* EVENT LISTENERS */
-
+/* VARIABLES */
+const form = document.querySelector('form');
+const taskInput = document.querySelector('.input-text');
+const taskList = document.querySelector('.task-list');
 
 /* EVENT HANDLERS */
+
+// when adding a task
+form.addEventListener('submit', function(e) {
+
+  // get the input value
+  const task = taskInput.value;
+  // console.log(task);
+
+  // clear the input
+  taskInput.value = '';
+
+  // creating the list item
+  const listItem = document.createElement('li');
+  listItem.className = 'list-item transition-all duration-500 opacity-0';
+  listItem.textContent = task;
+  // listItem.setAttribute('onload', 'fadeIn()');
+  log(listItem);
+  taskList.appendChild(listItem); // will append as last child (by default)
+  setTimeout(fadeIn, 5);
+  function fadeIn() {
+    const item = document.querySelector('.list-item:last-child');
+    listItem.className += ' fade-in';
+  }
+ 
+  
+  
+  e.preventDefault();
+});
+
+/* UI props / cosmetics */
+
+// adds the class that fades in created element
+function fadeIn() {
+  const listItem = document.querySelector('.list-item:last-child'); // have to redeclare it due to function scope
+  listItem.className += ' fade-in'; // the space is so that it adds the class instead of removing the current
+}
+
+/* Utility */
+
+// shortcut for console.log
+function log(msg) {
+  console.log(msg);
+}

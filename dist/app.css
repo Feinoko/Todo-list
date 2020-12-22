@@ -31098,6 +31098,10 @@ video {
   transition-duration: 1000ms;
 }
 
+.duration-4000 {
+  transition-duration: 4000ms;
+}
+
 .delay-75 {
   transition-delay: 75ms;
 }
@@ -31225,8 +31229,15 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.fade-in {
+  opacity: 1;
+}
+
+.list-item {
+  margin-left: 1.25rem
+}
+
 .input-text {
-  /* background-color: aqua; */
   --tw-border-opacity: 1;
   border-color: rgba(55, 65, 81, var(--tw-border-opacity))
 }
@@ -61787,6 +61798,10 @@ body {
 
   .sm\:duration-1000 {
     transition-duration: 1000ms;
+  }
+
+  .sm\:duration-4000 {
+    transition-duration: 4000ms;
   }
 
   .sm\:delay-75 {
@@ -92387,6 +92402,10 @@ body {
     transition-duration: 1000ms;
   }
 
+  .md\:duration-4000 {
+    transition-duration: 4000ms;
+  }
+
   .md\:delay-75 {
     transition-delay: 75ms;
   }
@@ -122983,6 +123002,10 @@ body {
 
   .lg\:duration-1000 {
     transition-duration: 1000ms;
+  }
+
+  .lg\:duration-4000 {
+    transition-duration: 4000ms;
   }
 
   .lg\:delay-75 {
@@ -153583,6 +153606,10 @@ body {
     transition-duration: 1000ms;
   }
 
+  .xl\:duration-4000 {
+    transition-duration: 4000ms;
+  }
+
   .xl\:delay-75 {
     transition-delay: 75ms;
   }
@@ -184181,6 +184208,10 @@ body {
     transition-duration: 1000ms;
   }
 
+  .\32xl\:duration-4000 {
+    transition-duration: 4000ms;
+  }
+
   .\32xl\:delay-75 {
     transition-delay: 75ms;
   }
@@ -184238,4 +184269,6 @@ body {
             animation: bounce 1s infinite;
   }
 }
+
+
 

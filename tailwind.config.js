@@ -19,6 +19,7 @@ module.exports = {
     extend: {
       transitionDuration: {
         '400': '400ms',
+        '4000': '4000ms',
       },
       boxShadow: ['hover'],
     },
