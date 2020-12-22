@@ -21,8 +21,13 @@ Organise structure beforehand
 /* Current task 
 ==========
 make the newly created list item fade in - completed 22.12.20 11:40
-
+separating js files in small chunks
 ========== */
+
+/* IMPORTS */
+import { log } from './utility.js'
+
+log('hello world!');
 
 /* VARIABLES */
 const form = document.querySelector('form');
@@ -59,11 +64,3 @@ form.addEventListener('submit', function(e) {
     const item = document.querySelector('.list-item:last-child');
     item.className += ' fade-in';
   }
-
-
-/* Utility */
-
-// shortcut for console.log
-function log(msg) {
-  console.log(msg);
-}
