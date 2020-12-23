@@ -26,6 +26,7 @@ separating js files in small chunks
 
 /* IMPORTS */
 import { log } from './utility.js'
+import { fadeIn } from './ui.js'
 
 log('hello world!');
 
@@ -49,7 +50,6 @@ form.addEventListener('submit', function(e) {
   const listItem = document.createElement('li');
   listItem.className = 'list-item transition-all duration-500 opacity-0';
   listItem.textContent = task;
-  log(listItem);
   taskList.appendChild(listItem); // will append as last child (by default)
   setTimeout(fadeIn, 1); // for some reason, need a small delay until adding the fadein class for it to work
  
@@ -57,10 +57,3 @@ form.addEventListener('submit', function(e) {
   e.preventDefault();
 });
 
-/* UI props / cosmetics */
-
-// adds the class that fades in created element
-  function fadeIn() {
-    const item = document.querySelector('.list-item:last-child');
-    item.className += ' fade-in';
-  }
