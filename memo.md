@@ -21,7 +21,7 @@ Organise structure beforehand
 
 Current-task 
 ==========
-
+improve list items (delete button)
 ========== 
 
 Stashed tasks (put on backburner to keep focused on current task)

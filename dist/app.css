@@ -580,6 +580,52 @@ video {
   }
 }
 
+.list-item {
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+  --tw-gradient-from: #e5e7eb;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(229, 231, 235, 0));
+  --tw-gradient-to: #93c5fd;
+  --tw-border-opacity: 1;
+  border-color: rgba(55, 65, 81, var(--tw-border-opacity));
+  border-top-left-radius: 0.375rem;
+  border-style: solid;
+  border-width: 1px;
+  border-bottom-width: 2px;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  margin-left: 1.25rem;
+  opacity: 0;
+  padding-left: 0.5rem;
+  width: 75%;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-duration: 500ms;
+}
+
+.input-text {
+  --tw-border-opacity: 1;
+  border-color: rgba(55, 65, 81, var(--tw-border-opacity));
+}
+
+.input-text:focus {
+  --tw-border-opacity: 1;
+  border-color: rgba(96, 165, 250, var(--tw-border-opacity));
+}
+
+.input-text {
+  border-style: solid;
+  border-bottom-width: 1px;
+  display: block;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  width: 100%;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-duration: 400ms;
+}
+
 .space-y-0 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
@@ -31231,33 +31277,6 @@ body {
 
 .fade-in {
   opacity: 1;
-}
-
-.list-item {
-  margin-left: 1.25rem
-}
-
-.input-text {
-  --tw-border-opacity: 1;
-  border-color: rgba(55, 65, 81, var(--tw-border-opacity))
-}
-
-.input-text:focus {
-  --tw-border-opacity: 1;
-  border-color: rgba(96, 165, 250, var(--tw-border-opacity));
-}
-
-.input-text {
-  border-style: solid;
-  border-bottom-width: 1px;
-  display: block;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  width: 100%;
-  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-  transition-duration: 400ms;
 }
 
 @media (min-width: 640px) {
@@ -184269,6 +184288,4 @@ body {
             animation: bounce 1s infinite;
   }
 }
-
-
 
