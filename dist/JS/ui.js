@@ -29,10 +29,10 @@ export function validateInput(task) {
 export function errMsg(err) {
   const er = document.querySelector('.err-area');
   er.textContent = err;
-  er.classList.remove('invisible');
+  er.classList.remove('opacity-0');
   setTimeout(makeVisible, 2500);
   function makeVisible() {
-    er.classList.add('invisible');
+    er.classList.add('opacity-0');
   }
 
   // switch(err) {

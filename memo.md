@@ -21,10 +21,7 @@ Organise structure beforehand
 
 Current-task 
 ==========
-local storage feature - part1 - completed 23.12.20 0900
-task validation :
--prevent add task if no task is input - ok
--remove space at start if any
+make fadeIn reusable
 ========== 
 
 Stashed tasks (put on backburner to keep focused on current task)
