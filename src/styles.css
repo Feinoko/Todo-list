@@ -9,7 +9,7 @@
   }
 
   .del-btn {
-    @apply bg-red-300 w-5 border-solid border rounded-br-md border-gray-700 border-b-2 text-center inline-block transition-all duration-500 hover:bg-red-400 opacity-0;
+    @apply bg-red-300 w-5 border-solid border rounded-br-md border-gray-700 border-b-2 text-center inline-block transition-all duration-500 hover:bg-red-400 opacity-0 cursor-pointer;
   }
   
   .input-text {

@@ -1,16 +1,20 @@
-features / functionality
-  primary:
-  adding tasks to the task list
-  saving added tasks to local storage
-  removing individual tasks
-  searching specific tasks by filtering them
-  clearing all tasks
+Primary features & functionality
+===============================
 
-  secondary/optional
-  add night mode
+adding tasks to the task list
+saving added tasks to local storage
+removing individual tasks
+searching specific tasks by filtering them
+clearing all tasks
 
-  problems/bugs to fix
-  when task description is too long it goes through the del btn, reduce it with '...' and add a tooltip on mouse over
+secondary/optional:
+------------------
+add night mode
+stylish effect when deleting task
+
+problems/bugs to fix:
+------------------
+when task description is too long it goes through the del btn, reduce it with '...' and add a tooltip on mouse over
 
 
 coding guidelines memo 
@@ -24,7 +28,7 @@ Organise structure beforehand
 
 Current-task 
 ==========
-improve list items (delete button)
+event : delete item
 ========== 
 
 Stashed tasks (put on backburner to keep focused on current task)
