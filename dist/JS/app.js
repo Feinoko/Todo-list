@@ -43,8 +43,12 @@ form.addEventListener('submit', function(e) {
   const listItem = document.createElement('li');
   listItem.className = 'list-item';
   listItem.textContent = task;
+  const delBtn = document.createElement('a');
+  delBtn.className = 'del-btn';
+  delBtn.textContent = 'x';
 
   taskList.appendChild(listItem); // will append as last child (by default)
+  taskList.appendChild(delBtn);
   setTimeout(fadeIn, 1); // for some reason, need a small delay until adding the fadein class for it to work
  
   // preventing default form behavior when submitting

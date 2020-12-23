@@ -12,8 +12,10 @@ import { log } from './utility.js'
 
 // adds the class that fades in created element
 export function fadeIn() {
-  const item = document.querySelector('.list-item:last-child');
+  const item = document.querySelector('.list-item:last-of-type');
   item.className += ' fade-in';
+  const item2 = document.querySelector('.del-btn:last-child');
+  item2.className += ' fade-in';
 }
 
 // validation of item

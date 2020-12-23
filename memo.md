@@ -6,8 +6,11 @@ features / functionality
   searching specific tasks by filtering them
   clearing all tasks
 
-  secondary
+  secondary/optional
   add night mode
+
+  problems/bugs to fix
+  when task description is too long it goes through the del btn, reduce it with '...' and add a tooltip on mouse over
 
 
 coding guidelines memo 

@@ -7,6 +7,10 @@
   .list-item {
     @apply ml-5 mb-2 border-solid border border-b-2 border-gray-700 pl-2 rounded-tl-md inline-block w-9/12 bg-gradient-to-br from-gray-200 to-blue-300 transition-all duration-500 opacity-0;
   }
+
+  .del-btn {
+    @apply bg-red-300 w-5 border-solid border rounded-br-md border-gray-700 border-b-2 text-center inline-block transition-all duration-500 hover:bg-red-400 opacity-0;
+  }
   
   .input-text {
     @apply block w-full border-gray-700 border-b border-solid outline-none focus:border-blue-400 transition duration-400;
