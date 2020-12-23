@@ -61,10 +61,27 @@ document.body.addEventListener('click', function(e) {
 
   // trigger event only when clicking the del btn
   if (e.target.classList.contains('del-btn')) {
+    // removing from memory prior deleting on UI
+    const task = e.target.previousElementSibling;
+    const taskContent = task.textContent;
+    // get tasks from memory
+    const tasks = JSON.parse(localStorage.getItem('tasks'));
+    // cycling thru each value of saved tasks to find the one that matches the deleted item exactly
+    tasks.forEach(function(task, index) {
+      if (task === taskContent) {
+        tasks.splice(index, 1); // removing the value from memory that matches the deleted one
+      }
+      log(tasks);
+      localStorage.setItem('tasks', JSON.stringify(tasks));
+    });
+
+    
     // removing the task itself which is the previous sibling of the del btn
     e.target.previousElementSibling.remove();
     // removing the del btn
     e.target.remove();
+
+    
   }
 
   // to prevent default behavior of button

@@ -14,7 +14,8 @@ stylish effect when deleting task
 
 problems/bugs to fix:
 ------------------
-when task description is too long it goes through the del btn, reduce it with '...' and add a tooltip on mouse over
+-when task description is too long it goes through the del btn, reduce it with '...' and add a tooltip on mouse over
+-add a '(2)' if same item exists in list
 
 
 coding guidelines memo 
@@ -28,7 +29,9 @@ Organise structure beforehand
 
 Current-task 
 ==========
-event : delete item
+local storage part 2 : when deleting item
+---
+description/details : 
 ========== 
 
 Stashed tasks (put on backburner to keep focused on current task)
