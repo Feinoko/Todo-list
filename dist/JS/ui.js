@@ -30,14 +30,9 @@ export function errMsg(err) {
   const er = document.querySelector('.err-area');
   er.textContent = err;
   er.classList.remove('opacity-0');
+  // set duration of display
   setTimeout(makeVisible, 2500);
   function makeVisible() {
     er.classList.add('opacity-0');
   }
-
-  // switch(err) {
-  //   case invalidInput : 
-  //     log('test input is invalid!');
-  //     break;
-  // }
 }

@@ -21,7 +21,7 @@ Organise structure beforehand
 
 Current-task 
 ==========
-make fadeIn reusable
+
 ========== 
 
 Stashed tasks (put on backburner to keep focused on current task)
