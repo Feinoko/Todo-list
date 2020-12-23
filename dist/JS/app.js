@@ -18,10 +18,15 @@ Break it down to very small bits
 Organise structure beforehand
 */
 
-/* Current task 
+/* Current-task 
 ==========
-make the newly created list item fade in - completed 22.12.20 11:40
-separating js files in small chunks
+local storage feature - part1 - completed 23.12.20 0900
+task validation : prevent add task if no task is input
+========== */
+
+/* Stashed tasks (put on backburner to keep focused on current task)
+==========
+
 ========== */
 
 /* IMPORTS */
@@ -41,15 +46,28 @@ const taskList = document.querySelector('.task-list');
 form.addEventListener('submit', function(e) {
 
   // get the input value
-  const task = taskInput.value;
+  let task = taskInput.value;
 
-  // clear the input
+  // saving to storage
+  // get the current local storage
+  let tasks;
+  localStorage.getItem('tasks') === null ? tasks = [] : tasks = JSON.parse(localStorage.getItem('tasks'));
+  // set the task item into storage
+  tasks.push(task);
+  log(tasks);
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+
+  // clear the task input
   taskInput.value = '';
 
   // creating the list item
   const listItem = document.createElement('li');
   listItem.className = 'list-item transition-all duration-500 opacity-0';
   listItem.textContent = task;
+
+
+
+
   taskList.appendChild(listItem); // will append as last child (by default)
   setTimeout(fadeIn, 1); // for some reason, need a small delay until adding the fadein class for it to work
  
