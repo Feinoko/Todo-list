@@ -29,7 +29,7 @@ Organise structure beforehand
 
 Current-task 
 ==========
-Clear all tasks when clicking 'clear tasks'
+Filter tasks
 ---
 description/details : 
 ========== 

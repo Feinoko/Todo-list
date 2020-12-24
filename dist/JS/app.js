@@ -10,12 +10,15 @@ const taskList = document.querySelector('.task-list');
 // err messages
 const invalidInput = 'please enter a valid input';
 //#endregion
+const filtTasks = document.querySelector('.input-text[placeholder="Filter Tasks"]');
+let filtValue = filtTasks.value;
 
 /* EVENT HANDLERS */
 
 // loading tasks from memory on load
 window.addEventListener('load', function() {
   fetchMemory();
+  
 });
 
 // adding task to the list
@@ -38,7 +41,6 @@ form.addEventListener('submit', function(e) {
   localStorage.getItem('tasks') === null ? tasks = [] : tasks = JSON.parse(localStorage.getItem('tasks'));
   // set the task item into storage
   tasks.push(task);
-  log(tasks);
   localStorage.setItem('tasks', JSON.stringify(tasks));
 
   // clear the task input
@@ -100,5 +102,28 @@ clrBtn.addEventListener('click', function(e) {
   localStorage.clear();
   location.reload();
   e.preventDefault;
-})
+});
+
+// filter tasks
+// run below when typin in filter box
+filtTasks.addEventListener('input', function() {
+  filtValue = filtTasks.value;
+  console.log(filtValue);
+  // get all list items as an array (not a node list if only using querySelectorAll) to be able to use array functions like forEach...
+  const listedTasks = Array.from(document.querySelectorAll('.list-item'));
+  console.log(listedTasks);
+  listedTasks.forEach(function(task) {
+    console.log(task.textContent);
+    // hide task that does not fit filter input
+    if(!task.textContent.includes(filtTasks.value)) {
+      log('no-match');
+      task.style.visibility = 'hidden';
+      task.nextElementSibling.style.visibility = 'hidden';
+    } else {
+      task.style.visibility = 'visible';
+      task.nextElementSibling.style.visibility = 'visible';
+    }
+  })
+});
+
 
