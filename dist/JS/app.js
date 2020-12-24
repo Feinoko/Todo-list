@@ -93,3 +93,12 @@ document.body.addEventListener('click', function(e) {
   e.preventDefault;
 });
 
+// clearing all tasks
+// get the clear tasks btn
+const clrBtn = document.querySelector('.clear-tasks-btn');
+clrBtn.addEventListener('click', function(e) {
+  localStorage.clear();
+  location.reload();
+  e.preventDefault;
+})
+

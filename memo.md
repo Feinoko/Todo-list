@@ -29,7 +29,7 @@ Organise structure beforehand
 
 Current-task 
 ==========
-local storage part 3 : when loading page, resume task list
+Clear all tasks when clicking 'clear tasks'
 ---
 description/details : 
 ========== 
