@@ -1,6 +1,6 @@
 /* IMPORTS */
 import { log } from './utility.js'
-import { fadeIn, validateInput, errMsg } from './ui.js'
+import { fadeIn, validateInput, errMsg, fetchMemory } from './ui.js'
 
 /* VARIABLES */
 //#region error messages
@@ -12,6 +12,11 @@ const invalidInput = 'please enter a valid input';
 //#endregion
 
 /* EVENT HANDLERS */
+
+// loading tasks from memory on load
+window.addEventListener('load', function() {
+  fetchMemory();
+});
 
 // adding task to the list
 form.addEventListener('submit', function(e) {
@@ -61,7 +66,7 @@ document.body.addEventListener('click', function(e) {
 
   // trigger event only when clicking the del btn
   if (e.target.classList.contains('del-btn')) {
-    // removing from memory prior deleting on UI
+    /* removing from memory prior deleting on UI */
     const task = e.target.previousElementSibling;
     const taskContent = task.textContent;
     // get tasks from memory

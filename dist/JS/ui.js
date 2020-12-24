@@ -38,3 +38,24 @@ export function errMsg(err) {
     er.classList.add('opacity-0');
   }
 }
+
+// Resume memory items on load
+export function fetchMemory() {
+  const taskList = document.querySelector('.task-list');
+  const tasks = JSON.parse(localStorage.getItem('tasks'));
+  if (tasks !== null) {
+    tasks.forEach(function(task) {
+      let listItem = document.createElement('li');
+      listItem.className = 'list-item';
+      listItem.classList.add('opacity-100');
+      log(listItem);
+      listItem.textContent = task;
+      let delBtn = document.createElement('a');
+      delBtn.className = 'del-btn';
+      delBtn.classList.add('opacity-100');
+      delBtn.textContent = 'x';
+      taskList.appendChild(listItem); // will append as last child (by default)
+      taskList.appendChild(delBtn);
+    });
+  }
+}
