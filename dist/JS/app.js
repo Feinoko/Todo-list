@@ -107,18 +107,18 @@ clrBtn.addEventListener('click', function(e) {
 // filter tasks
 // run below when typin in filter box
 filtTasks.addEventListener('input', function() {
+  // get what is typed as filter
   filtValue = filtTasks.value;
-  console.log(filtValue);
   // get all list items as an array (not a node list if only using querySelectorAll) to be able to use array functions like forEach...
   const listedTasks = Array.from(document.querySelectorAll('.list-item'));
-  console.log(listedTasks);
+  // scan each task to see if match filter
   listedTasks.forEach(function(task) {
-    console.log(task.textContent);
     // hide task that does not fit filter input
     if(!task.textContent.includes(filtTasks.value)) {
       log('no-match');
       task.style.visibility = 'hidden';
       task.nextElementSibling.style.visibility = 'hidden';
+      // otherwise keep/make them visible
     } else {
       task.style.visibility = 'visible';
       task.nextElementSibling.style.visibility = 'visible';
