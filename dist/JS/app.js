@@ -115,7 +115,6 @@ filtTasks.addEventListener('input', function() {
   listedTasks.forEach(function(task) {
     // hide task that does not fit filter input
     if(!task.textContent.includes(filtTasks.value)) {
-      log('no-match');
       task.style.visibility = 'hidden';
       task.nextElementSibling.style.visibility = 'hidden';
       // otherwise keep/make them visible
