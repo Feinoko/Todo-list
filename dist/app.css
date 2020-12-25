@@ -676,6 +676,8 @@ video {
   opacity: 0;
 }
 
+
+
 .outline-none {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -902,6 +904,10 @@ video {
 
 body {
   font-family: 'Roboto', sans-serif;
+}
+
+.opacity-100 {
+  opacity: 1;
 }
 
 .fade-in {
